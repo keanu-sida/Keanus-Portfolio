@@ -9,7 +9,7 @@
 
     let benefits = [
         {name: 'a self taught developer', description: 'Professionally certified by Codecademy in Full Stack Engineering, I have built dozens of full stack applications from scratch using dozens of frameworks, libraries, and languages.'},
-        {name: 'a data visualization nerd', description: 'Originally introduced to programming in during undergraduate work in genomic analysis, I have professional internship experience working with R and Python.'},
+        {name: 'a data visualization nerd', description: 'Originally introduced to programming in during undergraduate work in genomic analysis, I have professional experience working with open source libraries in R and Python.'},
         {name: 'a biochemistry graduate', description: 'asdfasdfadsfa'}
     ]
 </script>
