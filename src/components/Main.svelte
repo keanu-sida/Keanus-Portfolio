@@ -2,6 +2,7 @@
     import Step from "./Step.svelte";
     import LiveProjects from "./LiveProjects.svelte";
     import Resume from "./Resume.svelte";
+    import { reveal } from "$lib/effects";
 
     let steps = [
         {
@@ -42,8 +43,9 @@
 </script>
 
 <main class="flex flex-col flex-1 p-4">
-    <section id="introPage" class="grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14">
-        <div class="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10">
+    <section id="introPage" class="relative grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14">
+        <div class="hero-blob" aria-hidden="true"></div>
+        <div class="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10" use:reveal>
             <h2 class="font-semibold text-4xl sm:text-5xl md:text-6xl">
                 Hi! I'm <span class="poppins text-violet-400">Keanu</span> Sida <br/>Full Stack <span class="poppins text-violet-400">Developer</span>
             </h2>
@@ -70,13 +72,13 @@
                 </a>
             </div>
         </div>
-        <div class="relative shadow-2xl grid place-items-center">
+        <div class="relative shadow-2xl grid place-items-center" use:reveal={{ delay: 150 }}>
             <img src={"/images/profile.png"}  alt="Logo displaying a raccoon in front of a laptop" class="object-cover z-[2] max-h-[70vh]"/>
         </div>
     </section>
 
     <section id="skills" class="py-20 lg:py-32">
-        <div class="flex flex-col gap-2 text-center mb-16">
+        <div class="flex flex-col gap-2 text-center mb-16" use:reveal>
             <h6 class="text-lg sm:text-xl md:text-2xl">
                 Technical Expertise
             </h6>
@@ -86,7 +88,7 @@
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {#each Object.entries(skills) as [category, skillList]}
-                <div class="bg-slate-900 p-6 rounded-lg border border-violet-700">
+                <div class="bg-slate-900 p-6 rounded-lg border border-violet-700 spotlight gradient-border" use:reveal>
                     <h4 class="text-xl font-semibold text-violet-400 mb-4">{category}</h4>
                     <div class="flex flex-wrap gap-2">
                         {#each skillList as skill}
@@ -107,7 +109,7 @@
                 Curious to <span class="poppins text-violet-400">see</span> my work?
             </h3>
         </div>
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10" use:reveal>
             {#each steps as step}
                 <Step {step}>
                     <p>{step.description}</p>

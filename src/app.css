@@ -16,3 +16,46 @@ h3,
 .poppins {
     font-family: 'Poppins', sans-serif;
 }
+
+/* Spotlight helper for tilt */
+.spotlight {
+  position: relative;
+  background: radial-gradient(600px circle at var(--spotlight-x, 50%) var(--spotlight-y, 50%), rgba(255,255,255,0.08), transparent 40%);
+}
+
+/* Gradient border utility */
+.gradient-border {
+  position: relative;
+  border-radius: 0.5rem;
+}
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #7c3aed, #22d3ee);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Animated gradient blob background */
+.hero-blob {
+  position: absolute;
+  inset: auto -20% -20% -20%;
+  height: 50vh;
+  filter: blur(60px);
+  opacity: 0.35;
+  background: radial-gradient(closest-side, #7c3aed, transparent),
+              radial-gradient(closest-side, #22d3ee, transparent),
+              radial-gradient(closest-side, #a78bfa, transparent);
+  animation: floaty 18s ease-in-out infinite alternate;
+}
+
+@keyframes floaty {
+  0% { transform: translateY(0) translateX(0) scale(1); }
+  50% { transform: translateY(-10px) translateX(10px) scale(1.03); }
+  100% { transform: translateY(10px) translateX(-10px) scale(1); }
+}
