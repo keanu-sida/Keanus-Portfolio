@@ -55,11 +55,12 @@
                     class="blueShadow mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950 cursor-pointer" 
                     href="mailto:keanu.sida@gmail.com?subject=Hey, Keanu!&body=I am emailing you because I came across your website and would like to get in touch!" 
                     target="_blank"
+                    rel="noopener noreferrer"
                 >
                     <div 
                         class="absolute top-0 right-full w-full h-full bg-violet-400 opacity-20 group-hover:translate-x-full z-0 duration-200"
                     />
-                    <h4 class="relative z-9">Get in Touch &rarr;</h4>
+                    <h4 class="relative z-10">Get in Touch &rarr;</h4>
                 </a>
                 <a 
                     href="#projects" 
@@ -70,13 +71,13 @@
             </div>
         </div>
         <div class="relative shadow-2xl grid place-items-center">
-            <img src={"images/profile.png"}  alt="Logo displaying a raccoon in front of a laptop" class="object-cover z-[2] max-h-[70vh]"/>
+            <img src={"/images/profile.png"}  alt="Logo displaying a raccoon in front of a laptop" class="object-cover z-[2] max-h-[70vh]"/>
         </div>
     </section>
 
     <section id="skills" class="py-20 lg:py-32">
         <div class="flex flex-col gap-2 text-center mb-16">
-            <h6 class="text-large sm:text-xl md:text-2xl">
+            <h6 class="text-lg sm:text-xl md:text-2xl">
                 Technical Expertise
             </h6>
             <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">
@@ -99,7 +100,7 @@
 
     <section id="projects" class="py-20 lg:py-32 flex flex-col gap-24">
         <div class="flex flex-col gap-2 text-center">
-            <h6 class="text-large sm:text-xl md:text-2xl">
+            <h6 class="text-lg sm:text-xl md:text-2xl">
                 A few of my projects:
             </h6>
             <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">
@@ -158,85 +159,49 @@
             {/each}
         </div>
         <h5 class="text-2xl sm:text-3xl font-semibold text-center poppins">The <span class="text-violet-400 poppins">Complete</span> Package</h5>
-        <div class="flex flex-col overflow-x-scroll gap-10 max-w-[800px] mx-auto w-full">
-            <table class="bg-white text-slate-700 rounded text-center">
-                <thead class="border-b border-solid border-slate-200">
-                    <tr class="">
-                        <th/>
-                        <th class="whitespace-nowrap p-2 px-4">Candidate #1</th>
-                        <th class="whitespace-nowrap p-2 px-4">Candidate #2</th>
-                        <th class="whitespace-nowrap p-2 px-4">Candidate #3</th>
-                        <th class="whitespace-nowrap bg-violet-700 text-white p-4 px-8">Me</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="border-b border-solid border-slate-200">
-                        <td 
-                            class="border-r border-solid border-white pl-4 pr-8 py-4 font-semibold text-sm"
-                        >
-                            Dedication
-                        </td>
-                        <td><i class="fa-solid fa-check text-slate-500"></i></td>
-                        <td><i class="fa-solid fa-xmark text-slate-500"></i></td>
-                        <td><i class="fa-solid fa-xmark text-slate-500"></i></td>
-                        <td><i class="fa-solid fa-check text-green-500"></i></td>
-                    </tr>
-                    <tr class="border-b border-solid border-slate-200">
-                        <td 
-                            class="border-r border-solid border-white pl-4 pr-8 py-4 font-semibold text-sm"
-                        >
-                            Critical Thinking
-                        </td>
-                        <td><i class="fa-solid fa-xmark text-slate-500"></i></td>
-                        <td><i class="fa-solid fa-check text-slate-500"></i></td>
-                        <td><i class="fa-solid fa-check text-slate-500"></i></td>
-                        <td><i class="fa-solid fa-check text-green-500"></i></td>
-                    </tr>
-                    <tr class="border-b border-solid border-slate-200">
-                        <td 
-                            class="border-r border-solid border-white pl-4 pr-8 py-4 font-semibold text-sm"
-                        >
-                            Interpersonal Skills
-                        </td>
-                        <td><i class="fa-solid fa-check text-slate-500"></i></td>
-                        <td><i class="fa-solid fa-check text-slate-500"></i></td>
-                        <td><i class="fa-solid fa-xmark text-slate-500"></i></td>
-                        <td><i class="fa-solid fa-check text-green-500"></i></td>
-                    </tr>
-                    <tr class="border-b border-solid border-slate-200">
-                        <td 
-                            class="border-r border-solid border-white pl-4 pr-8 py-4 font-semibold text-sm"
-                        >
-                            Programming Expertise
-                        </td>
-                        <td><i class="fa-solid fa-xmark text-slate-500"></i></td>
-                        <td><i class="fa-solid fa-check text-slate-500"></i></td>
-                        <td><i class="fa-solid fa-check text-slate-500"></i></td>
-                        <td><i class="fa-solid fa-check text-green-500"></i></td>
-                    </tr>
-                    <tr class="border-b border-solid border-slate-200">
-                        <td 
-                            class="border-r border-solid border-white pl-4 pr-8 py-4 font-semibold text-sm"
-                        >
-                            Management Experience
-                        </td>
-                        <td><i class="fa-solid fa-xmark text-slate-500"></i></td>
-                        <td><i class="fa-solid fa-xmark text-slate-500"></i></td>
-                        <td><i class="fa-solid fa-xmark text-slate-500"></i></td>
-                        <td><i class="fa-solid fa-check text-green-500"></i></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="mx-auto -mt-12 italic sm:hidden opacity-50">
-            <p>Scroll to see more &rarr;</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1000px] mx-auto w-full">
+            <div class="bg-white/5 border border-violet-700 rounded-lg p-5">
+                <div class="flex items-center gap-3 mb-2">
+                    <i class="fa-solid fa-check text-green-500"></i>
+                    <h6 class="text-lg font-semibold">Dedication</h6>
+                </div>
+                <p class="text-slate-400 text-sm">Consistent learner with strong follow-through and reliability.</p>
+            </div>
+            <div class="bg-white/5 border border-violet-700 rounded-lg p-5">
+                <div class="flex items-center gap-3 mb-2">
+                    <i class="fa-solid fa-check text-green-500"></i>
+                    <h6 class="text-lg font-semibold">Critical Thinking</h6>
+                </div>
+                <p class="text-slate-400 text-sm">Analytical problem solver with a data-driven mindset.</p>
+            </div>
+            <div class="bg-white/5 border border-violet-700 rounded-lg p-5">
+                <div class="flex items-center gap-3 mb-2">
+                    <i class="fa-solid fa-check text-green-500"></i>
+                    <h6 class="text-lg font-semibold">Interpersonal Skills</h6>
+                </div>
+                <p class="text-slate-400 text-sm">Clear communicator and collaborative team player.</p>
+            </div>
+            <div class="bg-white/5 border border-violet-700 rounded-lg p-5">
+                <div class="flex items-center gap-3 mb-2">
+                    <i class="fa-solid fa-check text-green-500"></i>
+                    <h6 class="text-lg font-semibold">Programming Expertise</h6>
+                </div>
+                <p class="text-slate-400 text-sm">Full-stack experience across modern JS and Python ecosystems.</p>
+            </div>
+            <div class="bg-white/5 border border-violet-700 rounded-lg p-5">
+                <div class="flex items-center gap-3 mb-2">
+                    <i class="fa-solid fa-check text-green-500"></i>
+                    <h6 class="text-lg font-semibold">Management Experience</h6>
+                </div>
+                <p class="text-slate-400 text-sm">Comfortable leading initiatives and owning deliverables.</p>
+            </div>
         </div>
         <p class="mx-auto">So why not reach out?</p>
     </section>
 
     <section id="contact" class="py-20 lg:py-32">
         <div class="flex flex-col gap-2 text-center mb-16">
-            <h6 class="text-large sm:text-xl md:text-2xl">
+            <h6 class="text-lg sm:text-xl md:text-2xl">
                 Let's Connect
             </h6>
             <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">
@@ -249,17 +214,17 @@
                 <h4 class="text-lg font-semibold mb-2">Email</h4>
                 <p class="text-sm text-slate-400">keanu.sida@gmail.com</p>
             </a>
-            <a href="https://github.com/your-username" target="_blank" class="bg-slate-900 p-6 rounded-lg border border-violet-700 hover:border-violet-400 duration-200 text-center">
+            <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" class="bg-slate-900 p-6 rounded-lg border border-violet-700 hover:border-violet-400 duration-200 text-center">
                 <i class="fa-brands fa-github text-3xl text-violet-400 mb-4"></i>
                 <h4 class="text-lg font-semibold mb-2">GitHub</h4>
                 <p class="text-sm text-slate-400">View my code</p>
             </a>
-            <a href="https://linkedin.com/in/your-profile" target="_blank" class="bg-slate-900 p-6 rounded-lg border border-violet-700 hover:border-violet-400 duration-200 text-center">
+            <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" class="bg-slate-900 p-6 rounded-lg border border-violet-700 hover:border-violet-400 duration-200 text-center">
                 <i class="fa-brands fa-linkedin text-3xl text-violet-400 mb-4"></i>
                 <h4 class="text-lg font-semibold mb-2">LinkedIn</h4>
                 <p class="text-sm text-slate-400">Connect with me</p>
             </a>
-            <a href="/resume.pdf" target="_blank" class="bg-slate-900 p-6 rounded-lg border border-violet-700 hover:border-violet-400 duration-200 text-center">
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" class="bg-slate-900 p-6 rounded-lg border border-violet-700 hover:border-violet-400 duration-200 text-center">
                 <i class="fa-solid fa-file-pdf text-3xl text-violet-400 mb-4"></i>
                 <h4 class="text-lg font-semibold mb-2">Resume</h4>
                 <p class="text-sm text-slate-400">Download PDF</p>
