@@ -31,6 +31,12 @@
             issuer: "Codecademy",
             year: "2023",
             description: "Comprehensive program covering frontend, backend, and database technologies."
+        },
+        {
+            name: "Software Engineering Bootcamp",
+            issuer: "TripleTen",
+            year: "Dec 2025",
+            description: "Intensive, project-based program focused on practical full‑stack development, algorithms, and system design."
         }
     ];
 </script>
