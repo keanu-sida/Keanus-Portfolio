@@ -72,7 +72,7 @@
                 </a>
             </div>
         </div>
-        <div class="relative shadow-2xl grid place-items-center" use:reveal={{ delay: 150 }}>
+        <div class="relative grid place-items-center" use:reveal={{ delay: 150 }}>
             <img src={"/images/profile.png"}  alt="Logo displaying a raccoon in front of a laptop" class="object-cover z-[2] max-h-[70vh]"/>
         </div>
     </section>
