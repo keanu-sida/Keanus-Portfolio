@@ -1,20 +1,20 @@
 <script>
     export let projects = [
         {
-            name: "Your First Live Website",
-            description: "A full-stack web application built with modern technologies",
-            url: "https://your-first-website.com",
-            image: "/images/project1-preview.png",
-            tech: ["React.js", "Node.js", "PostgreSQL", "TailwindCSS"],
-            features: ["User authentication", "Real-time updates", "Responsive design"]
+            name: "Blotting Innovations",
+            description: "Revolutionary biotech platform for high-throughput western blotting solutions, enhancing protein analysis efficiency and precision in laboratories",
+            url: "https://blottinginnovations.com",
+            image: "/images/blotting-innovations-preview.png",
+            tech: ["React.js", "Node.js", "Express.js", "PostgreSQL", "TailwindCSS"],
+            features: ["96-well western blot systems", "Laboratory workflow optimization", "High-throughput protein analysis", "Responsive design"]
         },
         {
-            name: "Your Second Live Website", 
-            description: "An interactive platform showcasing advanced features",
-            url: "https://your-second-website.com",
-            image: "/images/project2-preview.png",
-            tech: ["Next.js", "TypeScript", "MongoDB", "Vercel"],
-            features: ["API integration", "Data visualization", "Mobile-first design"]
+            name: "Laconic Global", 
+            description: "Environmental fintech platform specializing in Securitized Sovereign Carbon, enabling nations to transform natural resources into tradable financial assets",
+            url: "https://laconicglobal.com",
+            image: "/images/laconic-global-preview.png",
+            tech: ["Next.js", "TypeScript", "Node.js", "MongoDB", "Stripe API"],
+            features: ["Carbon asset tokenization", "Financial trading platform", "Environmental impact tracking", "Secure payment processing"]
         }
     ];
 </script>
@@ -33,17 +33,12 @@
         {#each projects as project}
             <div class="bg-slate-900 rounded-lg border border-violet-700 overflow-hidden hover:border-violet-400 duration-200">
                 <div class="aspect-video bg-slate-800 relative overflow-hidden">
-                    <img 
-                        src={project.image} 
-                        alt={`Preview of ${project.name}`}
-                        class="w-full h-full object-cover"
-                        on:error={(e) => {
-                            e.target.style.display = 'none';
-                            e.target.nextElementSibling.style.display = 'flex';
-                        }}
-                    />
-                    <div class="hidden absolute inset-0 bg-gradient-to-br from-violet-600 to-purple-800 items-center justify-center">
-                        <i class="fa-solid fa-globe text-6xl text-white opacity-50"></i>
+                    <div class="absolute inset-0 bg-gradient-to-br from-violet-600 to-purple-800 flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fa-solid fa-globe text-6xl text-white opacity-70 mb-4"></i>
+                            <p class="text-white text-lg font-semibold">{project.name}</p>
+                            <p class="text-violet-200 text-sm">Live Website</p>
+                        </div>
                     </div>
                 </div>
                 
@@ -79,11 +74,11 @@
                             Visit Site
                         </a>
                         <a 
-                            href={`${project.url}/github`} 
+                            href={project.url} 
                             target="_blank" 
                             class="px-4 py-2 border border-violet-600 text-violet-400 hover:bg-violet-600 hover:text-white rounded-lg duration-200"
                         >
-                            <i class="fa-brands fa-github"></i>
+                            <i class="fa-solid fa-info-circle"></i>
                         </a>
                     </div>
                 </div>
