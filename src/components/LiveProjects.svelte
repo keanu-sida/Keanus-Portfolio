@@ -64,23 +64,24 @@
                         </ul>
                     </div>
                     
-                    <div class="flex gap-4">
+                    <div class="flex gap-3">
                         <a 
                             href={project.url} 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            class="flex-1 bg-violet-600 hover:bg-violet-500 text-white py-2 px-4 rounded-lg text-center font-medium duration-200"
+                            class="inline-flex items-center gap-2 bg-violet-600 hover:bg-violet-500 text-white py-2 px-4 rounded-full text-sm font-medium duration-200"
                         >
-                            <i class="fa-solid fa-external-link-alt mr-2"></i>
-                            Visit Site
+                            <i class="fa-solid fa-external-link-alt"></i>
+                            Visit
                         </a>
                         <a 
                             href={project.url} 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            class="px-4 py-2 border border-violet-600 text-violet-400 hover:bg-violet-600 hover:text-white rounded-lg duration-200"
+                            class="inline-flex items-center gap-2 border border-violet-600 text-violet-400 hover:bg-violet-600 hover:text-white rounded-full text-sm py-2 px-4 duration-200"
                         >
                             <i class="fa-solid fa-info-circle"></i>
+                            Details
                         </a>
                     </div>
                 </div>

@@ -18,10 +18,11 @@
     <h3 class="font-medium text-xl sm:text-2xl md:text-3xl">{step.name}</h3>
     <slot />
     <div class="flex-1 flex justify-between gap-4 items-center">
-        <div 
-            class="ml-auto cursor-pointer hover:text-slate-950 duration-200 relative after:absolute after:top-0 after:h-0 after:right-full after:w-full after:h-full after:bg-white after:duration-200 hover:after:translate-x-full after:z-[-1] overflow-hidden"
+        <span 
+            class="ml-auto inline-flex items-center gap-2 bg-violet-600 hover:bg-violet-500 text-white py-2 px-3 rounded-full text-sm font-medium duration-200"
         >
-            <p class="relative z-10">Go to &rarr;</p>
-        </div>
+            <i class="fa-solid fa-external-link-alt"></i>
+            Visit
+        </span>
     </div>
 </a>
