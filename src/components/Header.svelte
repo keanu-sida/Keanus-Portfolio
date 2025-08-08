@@ -2,8 +2,11 @@
     export let y;
 
     let tabs = [
+        {name: "Skills", link: "#skills"},
         {name: "Projects", link: "#projects"},
+        {name: "Resume", link: "#resume"},
         {name: "About Me", link: "#about"},
+        {name: "Contact", link: "#contact"},
     ]
 </script>
 
