@@ -18,10 +18,10 @@
 
     let education = [
         {
-            degree: "Bachelor of Science in Biochemistry",
-            school: "Your University",
-            year: "2020",
-            description: "Relevant coursework in data analysis, statistics, and laboratory techniques."
+            degree: "B.S. in Biochemistry and Molecular Biology",
+            school: "University of South Carolina",
+            year: "Dec 2020",
+            description: "Concentration in genomics; relevant coursework in data analysis, statistics, and laboratory techniques."
         }
     ];
 

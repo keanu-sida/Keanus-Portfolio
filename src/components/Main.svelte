@@ -8,21 +8,21 @@
         {
             name: "Cancellation Predictor", 
             icon: "fa-solid fa-hotel",
-            href: "https://github.com/your-username/cancellation-predictor",
+            href: "https://keanu-sida.github.io/hotelML/index.html",
             description: "Machine learning model using Pandas, NumPy, and sklearn to predict hotel booking cancellations with 85% accuracy.",
             tech: ["Python", "Pandas", "NumPy", "sklearn", "Jupyter"]
         },
         {
             name: "Genomic Analysis Tool", 
             icon: "fa-solid fa-dna",
-            href: "https://github.com/your-username/genomic-analysis",
+            href: "https://keanu-sida.github.io/IUD-study.pdf",
             description: "Bioinformatics application for DNA sequence analysis using R and Python with interactive visualizations.",
             tech: ["R", "Python", "Bioconductor", "Plotly", "Shiny"]
         },
         {
             name: "Movie Recommender", 
             icon: "fa-solid fa-film",
-            href: "https://github.com/your-username/movie-recommender",
+            href: "https://keanu-sida.github.io/MovieRecommendationSystem/index.html",
             description: "Content-based recommendation system using collaborative filtering and machine learning algorithms.",
             tech: ["Python", "Pandas", "NumPy", "scikit-learn", "Flask"]
         }
@@ -216,12 +216,12 @@
                 <h4 class="text-lg font-semibold mb-2">Email</h4>
                 <p class="text-sm text-slate-400">keanu.sida@gmail.com</p>
             </a>
-            <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" class="bg-slate-900 p-6 rounded-lg border border-violet-700 hover:border-violet-400 duration-200 text-center">
+            <a href="https://github.com/keanu-sida" target="_blank" rel="noopener noreferrer" class="bg-slate-900 p-6 rounded-lg border border-violet-700 hover:border-violet-400 duration-200 text-center">
                 <i class="fa-brands fa-github text-3xl text-violet-400 mb-4"></i>
                 <h4 class="text-lg font-semibold mb-2">GitHub</h4>
                 <p class="text-sm text-slate-400">View my code</p>
             </a>
-            <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" class="bg-slate-900 p-6 rounded-lg border border-violet-700 hover:border-violet-400 duration-200 text-center">
+            <a href="https://www.linkedin.com/in/keanu-sida" target="_blank" rel="noopener noreferrer" class="bg-slate-900 p-6 rounded-lg border border-violet-700 hover:border-violet-400 duration-200 text-center">
                 <i class="fa-brands fa-linkedin text-3xl text-violet-400 mb-4"></i>
                 <h4 class="text-lg font-semibold mb-2">LinkedIn</h4>
                 <p class="text-sm text-slate-400">Connect with me</p>
