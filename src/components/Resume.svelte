@@ -138,6 +138,8 @@
             description: "Intensive, project-based program focused on practical full‑stack development, algorithms, and system design."
         }
     ];
+
+    let showAllExperience = false;
 </script>
 
 <section id="resume" class="py-20 lg:py-32">
@@ -158,7 +160,7 @@
                 Work Experience
             </h4>
             <div class="space-y-8">
-                {#each experience as exp}
+                {#each (showAllExperience ? experience : experience.slice(0, 5)) as exp}
                     <div class="bg-slate-900 p-6 rounded-lg border border-violet-700">
                         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
                             <h5 class="text-xl font-semibold">{exp.title}</h5>
@@ -176,6 +178,16 @@
                         </ul>
                     </div>
                 {/each}
+                {#if experience.length > 5}
+                    <div class="pt-2 flex justify-center">
+                        <button
+                            class="px-4 py-2 rounded-full border border-violet-400 text-violet-400 hover:bg-violet-400 hover:text-slate-950 duration-200"
+                            on:click={() => showAllExperience = !showAllExperience}
+                        >
+                            {showAllExperience ? 'Show less' : 'See all'}
+                        </button>
+                    </div>
+                {/if}
             </div>
         </div>
 
