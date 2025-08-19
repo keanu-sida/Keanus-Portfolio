@@ -4,7 +4,7 @@
             name: "Blotting Innovations",
             description: "Revolutionary biotech platform for high-throughput western blotting solutions, enhancing protein analysis efficiency and precision in laboratories",
             url: "https://blottinginnovations.com",
-            image: "/images/blotting-innovations-preview.png",
+            image: "/images/blotting-sample.png",
             tech: ["HubSpot CMS", "HTML", "CSS", "JavaScript"],
             features: ["96-well western blot systems", "Laboratory workflow optimization", "High-throughput protein analysis", "Responsive design"],
             showDetails: false
@@ -14,7 +14,7 @@
             description: "Community-driven platform to make sustainable living fun, easy, and social — join EcoSquads, discover your EcoPersona, and explore topics with EcoPods.",
             url: "https://github.com/eduenez33/March-Code-jam",
             liveUrl: "https://eduenez33.github.io/March-Code-jam/",
-            image: "/images/ecolink-preview.png",
+            image: "/images/ecolink-sample.png",
             tech: ["HTML", "CSS", "JavaScript"],
             features: ["EcoSquads", "EcoPersona", "EcoPods", "Responsive design"]
         }
@@ -35,13 +35,7 @@
         {#each projects as project}
             <div class="bg-slate-900 rounded-lg border border-violet-700 overflow-hidden hover:border-violet-400 duration-200 spotlight gradient-border">
                 <div class="aspect-video bg-slate-800 relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-br from-violet-600 to-purple-800 flex items-center justify-center">
-                        <div class="text-center">
-                            <i class="fa-solid fa-globe text-6xl text-white opacity-70 mb-4"></i>
-                            <p class="text-white text-lg font-semibold">{project.name}</p>
-                            <p class="text-violet-200 text-sm">Live Website</p>
-                        </div>
-                    </div>
+                    <img src={project.image} alt={project.name} class="w-full h-full object-cover" />
                 </div>
                 
                 <div class="p-6">
