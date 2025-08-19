@@ -1,6 +1,5 @@
 <script>
     import "../app.css";
-    import Footer from "../components/Footer.svelte"
     import Header from "../components/Header.svelte"
 
     let y;
@@ -24,7 +23,6 @@
     </div>
     <Header {y} />
     <slot />
-    <Footer/>
 </div>
 
 <svelte:window bind:scrollY={y} bind:innerHeight bind:innerWidth />
