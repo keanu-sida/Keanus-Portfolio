@@ -12,7 +12,9 @@
     aria-disabled={!isExternal}
     class="p-4 sm:p-6 md:p-8 flex flex-col gap-4 rounded-lg border border-solid border-violet-700 text-center group cursor-pointer hover:border-violet-400 duration-200 spotlight gradient-border"
 >
-    <div class="bg-slate-950 grid place-items-center px-4 text-5xl md:text-6xl -mt-10 sm:-mt-12 md:-mt-14 lg:-mt-16 mx-auto duration-200">
+    <!-- Mask the top border just behind the icon -->
+    <div class="absolute left-1/2 -translate-x-1/2 -top-[1px] h-3 w-24 bg-slate-950 z-[1]"></div>
+    <div class="relative z-[2] bg-slate-950 grid place-items-center px-4 text-5xl md:text-6xl -mt-10 sm:-mt-12 md:-mt-14 lg:-mt-16 mx-auto duration-200">
         <i class={step.icon}/>
     </div>
     <h3 class="font-medium text-xl sm:text-2xl md:text-3xl">{step.name}</h3>
