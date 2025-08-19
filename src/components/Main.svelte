@@ -167,42 +167,42 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1000px] mx-auto w-full">
             <div class="bg-white/5 border border-violet-700 rounded-lg p-5">
                 <div class="flex items-center gap-3 mb-2">
-                    <i class="fa-solid fa-check text-green-500"></i>
+                    <span aria-label="dedication" class="text-2xl">💪</span>
                     <h6 class="text-lg font-semibold">Dedication</h6>
                 </div>
                 <p class="text-slate-400 text-sm">Consistent learner with strong follow-through and reliability.</p>
             </div>
             <div class="bg-white/5 border border-violet-700 rounded-lg p-5">
                 <div class="flex items-center gap-3 mb-2">
-                    <i class="fa-solid fa-check text-green-500"></i>
+                    <span aria-label="critical thinking" class="text-2xl">🧠</span>
                     <h6 class="text-lg font-semibold">Critical Thinking</h6>
                 </div>
                 <p class="text-slate-400 text-sm">Analytical problem solver with a data-driven mindset.</p>
             </div>
             <div class="bg-white/5 border border-violet-700 rounded-lg p-5">
                 <div class="flex items-center gap-3 mb-2">
-                    <i class="fa-solid fa-check text-green-500"></i>
+                    <span aria-label="interpersonal skills" class="text-2xl">🤝</span>
                     <h6 class="text-lg font-semibold">Interpersonal Skills</h6>
                 </div>
                 <p class="text-slate-400 text-sm">Clear communicator and collaborative team player.</p>
             </div>
             <div class="bg-white/5 border border-violet-700 rounded-lg p-5">
                 <div class="flex items-center gap-3 mb-2">
-                    <i class="fa-solid fa-check text-green-500"></i>
-                    <h6 class="text-lg font-semibold">Programming Expertise</h6>
+                    <span aria-label="speed" class="text-2xl">⚡</span>
+                    <h6 class="text-lg font-semibold">Speed</h6>
                 </div>
                 <p class="text-slate-400 text-sm">Full-stack experience across modern JS and Python ecosystems.</p>
             </div>
             <div class="bg-white/5 border border-violet-700 rounded-lg p-5">
                 <div class="flex items-center gap-3 mb-2">
-                    <i class="fa-solid fa-check text-green-500"></i>
+                    <span aria-label="management experience" class="text-2xl">🧭</span>
                     <h6 class="text-lg font-semibold">Management Experience</h6>
                 </div>
                 <p class="text-slate-400 text-sm">Comfortable leading initiatives and owning deliverables.</p>
             </div>
             <div class="bg-white/5 border border-violet-700 rounded-lg p-5">
                 <div class="flex items-center gap-3 mb-2">
-                    <i class="fa-solid fa-heart text-red-500"></i>
+                    <span aria-label="passion" class="text-2xl">❤️</span>
                     <h6 class="text-lg font-semibold">Passion</h6>
                 </div>
                 <p class="text-slate-400 text-sm">I care deeply about craft, performance, and user delight — I love building things that people love.</p>
