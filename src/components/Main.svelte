@@ -76,7 +76,7 @@
             </div>
         </div>
         <div class="relative grid place-items-center" use:reveal={{ delay: 150 }}>
-            <img src={"/images/profile.png"}  alt="Portrait of Keanu Sida" class="object-cover z-[2] max-h-[70vh] max-w-full h-auto"/>
+            <img src={"/images/selfie3.JPG"}  alt="Portrait of Keanu Sida" class="object-cover z-[2] max-h-[70vh] max-w-full h-auto"/>
         </div>
     </section>
 

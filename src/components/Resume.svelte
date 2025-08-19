@@ -5,14 +5,14 @@
             company: "Freelance",
             period: "2023 - Present",
             description: "Developed full-stack web applications using React.js, Node.js, and PostgreSQL. Implemented responsive designs and RESTful APIs.",
-            achievements: ["Built 10+ client projects", "Achieved 95% client satisfaction", "Reduced load times by 40%"]
+            achievements: ["Built 10+ client projects", "Achieved 100% client satisfaction", "Reduced load times by 40%"]
         },
         {
-            title: "Data Analyst",
-            company: "Previous Company",
+            title: "Geospatial Analyst Intern",
+            company: "MapLabs, Inc.",
             period: "2022 - 2023", 
-            description: "Analyzed genomic data using R and Python. Created interactive visualizations and machine learning models.",
-            achievements: ["Processed 1M+ data points", "Improved model accuracy by 15%", "Automated reporting workflows"]
+            description: "Supported geospatial analysis and mapping projects; cleaned, joined, and visualized spatial datasets. (Details pending)",
+            achievements: []
         }
     ];
 

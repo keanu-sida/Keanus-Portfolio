@@ -5,16 +5,18 @@
             description: "Revolutionary biotech platform for high-throughput western blotting solutions, enhancing protein analysis efficiency and precision in laboratories",
             url: "https://blottinginnovations.com",
             image: "/images/blotting-innovations-preview.png",
-            tech: ["React.js", "Node.js", "Express.js", "PostgreSQL", "TailwindCSS"],
-            features: ["96-well western blot systems", "Laboratory workflow optimization", "High-throughput protein analysis", "Responsive design"]
+            tech: ["HubSpot CMS", "HTML", "CSS", "JavaScript"],
+            features: ["96-well western blot systems", "Laboratory workflow optimization", "High-throughput protein analysis", "Responsive design"],
+            showDetails: false
         },
         {
-            name: "Laconic Global", 
-            description: "Environmental fintech platform specializing in Securitized Sovereign Carbon, enabling nations to transform natural resources into tradable financial assets",
-            url: "https://laconicglobal.com",
-            image: "/images/laconic-global-preview.png",
-            tech: ["Next.js", "TypeScript", "Node.js", "MongoDB", "Stripe API"],
-            features: ["Carbon asset tokenization", "Financial trading platform", "Environmental impact tracking", "Secure payment processing"]
+            name: "EcoLink", 
+            description: "Community-driven platform to make sustainable living fun, easy, and social — join EcoSquads, discover your EcoPersona, and explore topics with EcoPods.",
+            url: "https://github.com/eduenez33/March-Code-jam",
+            liveUrl: "https://eduenez33.github.io/March-Code-jam/",
+            image: "/images/ecolink-preview.png",
+            tech: ["HTML", "CSS", "JavaScript"],
+            features: ["EcoSquads", "EcoPersona", "EcoPods", "Responsive design"]
         }
     ];
 </script>
@@ -66,7 +68,7 @@
                     
                     <div class="flex gap-3">
                         <a 
-                            href={project.url} 
+                            href={project.liveUrl ?? project.url} 
                             target="_blank" 
                             rel="noopener noreferrer"
                             class="inline-flex items-center gap-2 bg-violet-600 hover:bg-violet-500 text-white py-2 px-4 rounded-full text-sm font-medium duration-200"
@@ -74,15 +76,17 @@
                             <i class="fa-solid fa-external-link-alt"></i>
                             Visit
                         </a>
-                        <a 
-                            href={project.url} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            class="inline-flex items-center gap-2 border border-violet-600 text-violet-400 hover:bg-violet-600 hover:text-white rounded-full text-sm py-2 px-4 duration-200"
-                        >
-                            <i class="fa-solid fa-info-circle"></i>
-                            Details
-                        </a>
+                        {#if project.showDetails !== false && project.url}
+                            <a 
+                                href={project.url} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                class="inline-flex items-center gap-2 border border-violet-600 text-violet-400 hover:bg-violet-600 hover:text-white rounded-full text-sm py-2 px-4 duration-200"
+                            >
+                                <i class="fa-solid fa-info-circle"></i>
+                                Details
+                            </a>
+                        {/if}
                     </div>
                 </div>
             </div>
