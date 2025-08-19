@@ -31,7 +31,8 @@
     let benefits = [
         {name: 'a self taught developer', description: 'Professionally certified by Codecademy in Full Stack Engineering, I have built dozens of full stack applications from scratch using modern frameworks like React.js, Next.js, and SvelteKit. My passion for learning drives me to stay current with the latest technologies and best practices.'},
         {name: 'a data visualization nerd', description: 'Originally introduced to programming during undergraduate work in genomic analysis, I have professional experience working with open source libraries in R and Python. I love transforming complex data into meaningful insights through interactive visualizations and machine learning models.'},
-        {name: 'a biochemistry graduate', description: 'My background in biochemistry has given me a unique analytical perspective and strong problem-solving skills. This scientific foundation helps me approach software development with methodical precision and attention to detail.'}
+        {name: 'a biochemistry graduate', description: 'My background in biochemistry has given me a unique analytical perspective and strong problem-solving skills. This scientific foundation helps me approach software development with methodical precision and attention to detail.'},
+        {name: 'a native German speaker & dual citizen', description: 'Native German language proficiency and dual citizenship; comfortable collaborating across cultures and regions.'}
     ]
 
     let skills = {
