@@ -33,6 +33,12 @@
             description: "Comprehensive program covering frontend, backend, and database technologies."
         },
         {
+            name: "Data Science and Machine Learning",
+            issuer: "MIT Schwarzman College of Computing",
+            year: "2022",
+            description: "Coursework in machine learning, data analysis, and applied AI methods."
+        },
+        {
             name: "Software Engineering Bootcamp",
             issuer: "TripleTen",
             year: "Dec 2025",
