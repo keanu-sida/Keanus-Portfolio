@@ -200,6 +200,13 @@
                 </div>
                 <p class="text-slate-400 text-sm">Comfortable leading initiatives and owning deliverables.</p>
             </div>
+            <div class="bg-white/5 border border-violet-700 rounded-lg p-5">
+                <div class="flex items-center gap-3 mb-2">
+                    <i class="fa-solid fa-heart text-red-500"></i>
+                    <h6 class="text-lg font-semibold">Passion</h6>
+                </div>
+                <p class="text-slate-400 text-sm">I care deeply about craft, performance, and user delight — I love building things that people love.</p>
+            </div>
         </div>
         <p class="mx-auto">So why not reach out?</p>
     </section>
