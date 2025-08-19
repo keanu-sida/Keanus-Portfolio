@@ -77,7 +77,7 @@
             </div>
         </div>
         <div class="relative grid place-items-center" use:reveal={{ delay: 150 }}>
-            <img src={"/images/selfie3.JPG"}  alt="Portrait of Keanu Sida" class="block object-cover z-[2] max-h-[70vh] max-w-full h-auto" style="clip-path: inset(0 0 4px 0);"/>
+            <img src={"/images/selfie3.PNG"}  alt="Portrait of Keanu Sida" class="block object-cover z-[2] max-h-[70vh] max-w-full h-auto" style="clip-path: inset(0 0 4px 0);"/>
         </div>
     </section>
 
@@ -171,7 +171,7 @@
                     <span aria-label="dedication" class="text-2xl">💪</span>
                     <h6 class="text-lg font-semibold">Dedication</h6>
                 </div>
-                <p class="text-slate-400 text-sm">Consistent learner with strong follow-through and reliability.</p>
+                <p class="text-slate-400 text-sm">Consistent learner with strong follow-through, attention to detail, and reliability.</p>
             </div>
             <div class="bg-white/5 border border-violet-700 rounded-lg p-5">
                 <div class="flex items-center gap-3 mb-2">
