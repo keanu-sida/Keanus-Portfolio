@@ -5,14 +5,19 @@
             company: "Freelance",
             period: "2023 - Present",
             description: "Developed full-stack web applications using React.js, Node.js, and PostgreSQL. Implemented responsive designs and RESTful APIs.",
-            achievements: ["Built 10+ client projects", "Achieved 100% client satisfaction", "Reduced load times by 40%"]
+            achievements: ["Built 10+ client projects", "Achieved 100% client satisfaction"]
         },
         {
             title: "Geospatial Analyst Intern",
             company: "MapLabs, Inc.",
-            period: "2022 - 2023", 
-            description: "Supported geospatial analysis and mapping projects; cleaned, joined, and visualized spatial datasets. (Details pending)",
-            achievements: []
+            period: "2023 - 2024", 
+            description: "Supported geospatial analysis and mapping projects; cleaned, joined, and visualized spatial datasets using Python/GeoPandas, QGIS/ArcGIS Pro, and PostGIS.",
+            achievements: [
+                "Processed and joined spatial datasets (Shapefile, GeoJSON, CSV) with GeoPandas and PostGIS",
+                "Built reproducible map production workflows in QGIS/ArcGIS Pro for analysis and reporting",
+                "Implemented geocoding and reverse‑geocoding workflows to standardize address data",
+                "Published interactive web maps (Leaflet/Mapbox) with clustering and heatmap layers"
+            ]
         },
         {
             title: "Assistant Club Manager",
