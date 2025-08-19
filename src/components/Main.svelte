@@ -38,7 +38,11 @@
         "Frontend": ["React.js", "Next.js", "SvelteKit", "JavaScript", "TypeScript", "HTML5", "CSS3", "TailwindCSS"],
         "Backend": ["Node.js", "Express.js", "Python", "PostgreSQL", "MongoDB", "REST APIs"],
         "Data Science": ["Pandas", "NumPy", "scikit-learn", "R", "Jupyter", "Matplotlib", "Plotly"],
-        "Tools": ["Git", "GitHub", "VS Code", "Docker", "Postman", "Figma"]
+        "AI/ML & LLM": [
+            "OpenAI API", "Claude API", "Ollama", "LangChain", "LangGraph", "AI Agents",
+            "Vector Databases", "RAG", "Vapi", "LangFlow", "n8n", "LiveKit", "CrewAI"
+        ],
+        "Tools": ["Git", "GitHub", "VS Code", "Docker", "Postman", "Figma", "Cursor"]
     }
 </script>
 
@@ -49,7 +53,7 @@
                 Hi! I'm <span class="poppins text-violet-400">Keanu</span> Sida <br/>Full Stack <span class="poppins text-violet-400">Developer</span>
             </h2>
             <p class="text-base sm:text-lg md:text-xl">
-                My <span class="poppins text-violet-400">favorite tech stack</span> includes JavaScript (React.js, Next.js, or SvelteKit), TailwindCSS, Python, Node.js, Express.js, and PostgreSQL! 
+                AI‑forward stack: TypeScript, SvelteKit/Next.js, Node.js/Express, PostgreSQL, Tailwind CSS — plus LLM tooling (OpenAI/Claude, LangChain/LangGraph), RAG, and vector databases.
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
                 <a 
@@ -85,7 +89,7 @@
                 My <span class="poppins text-violet-400">Skills</span> & Technologies
             </h3>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {#each Object.entries(skills) as [category, skillList]}
                 <div class="bg-slate-900 p-6 rounded-lg border border-violet-700 spotlight gradient-border" use:reveal>
                     <h4 class="text-xl font-semibold text-violet-400 mb-4">{category}</h4>
