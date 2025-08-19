@@ -4,6 +4,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 * {
@@ -52,6 +53,12 @@ h3,
               radial-gradient(closest-side, #22d3ee, transparent),
               radial-gradient(closest-side, #a78bfa, transparent);
   animation: floaty 18s ease-in-out infinite alternate;
+}
+
+/* Ensure media never overflows container on small screens */
+img, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
 }
 
 @keyframes floaty {

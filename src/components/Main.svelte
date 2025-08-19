@@ -43,7 +43,7 @@
 </script>
 
 <main class="flex flex-col flex-1 p-4">
-    <section id="introPage" class="relative grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14">
+    <section id="introPage" class="relative grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14 overflow-hidden">
         <div class="hero-blob" aria-hidden="true"></div>
         <div class="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10" use:reveal>
             <h2 class="font-semibold text-4xl sm:text-5xl md:text-6xl">
@@ -73,7 +73,7 @@
             </div>
         </div>
         <div class="relative grid place-items-center" use:reveal={{ delay: 150 }}>
-            <img src={"/images/profile.png"}  alt="Logo displaying a raccoon in front of a laptop" class="object-cover z-[2] max-h-[70vh]"/>
+            <img src={"/images/profile.png"}  alt="Portrait of Keanu Sida" class="object-cover z-[2] max-h-[70vh] max-w-full h-auto"/>
         </div>
     </section>
 
