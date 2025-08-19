@@ -77,7 +77,7 @@
             </div>
         </div>
         <div class="relative grid place-items-center" use:reveal={{ delay: 150 }}>
-            <img src={"/images/selfie3.JPG"}  alt="Portrait of Keanu Sida" class="object-cover z-[2] max-h-[70vh] max-w-full h-auto"/>
+            <img src={"/images/selfie3.JPG"}  alt="Portrait of Keanu Sida" class="block object-cover z-[2] max-h-[70vh] max-w-full h-auto" style="clip-path: inset(0 0 4px 0);"/>
         </div>
     </section>
 
