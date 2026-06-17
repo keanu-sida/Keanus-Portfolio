@@ -1,6 +1,15 @@
 <script>
     export let projects = [
         {
+            name: "Pipeline",
+            description: "Privacy-first job application tracker for managing an entry-level software engineering search. All data stays in your browser — kanban board, stats, and JSON export.",
+            url: "https://github.com/keanu-sida/pipeline",
+            liveUrl: "/pipeline/",
+            image: "/images/pipeline-sample.svg",
+            tech: ["React", "TypeScript", "IndexedDB", "Tailwind CSS"],
+            features: ["Kanban pipeline view", "Local-only private storage", "Resume version tracking", "JSON backup export"]
+        },
+        {
             name: "Blotting Innovations",
             description: "Revolutionary biotech platform for high-throughput western blotting solutions, enhancing protein analysis efficiency and precision in laboratories",
             url: "https://blottinginnovations.com",
