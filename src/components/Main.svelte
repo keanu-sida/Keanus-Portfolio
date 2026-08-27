@@ -2,64 +2,29 @@
     import Step from "./Step.svelte";
     import LiveProjects from "./LiveProjects.svelte";
     import Resume from "./Resume.svelte";
+    import SectionHeading from "$lib/components/SectionHeading.svelte";
+    import Badge from "$lib/components/Badge.svelte";
+    import ContactCard from "$lib/components/ContactCard.svelte";
+    import Card from "$lib/components/Card.svelte";
     import { reveal } from "$lib/effects";
-
-    let steps = [
-        {
-            name: "Cancellation Predictor", 
-            icon: "fa-solid fa-hotel",
-            href: "https://keanu-sida.github.io/hotelML/index.html",
-            description: "Machine learning model using Pandas, NumPy, and sklearn to predict hotel booking cancellations with 85% accuracy.",
-            tech: ["Python", "Pandas", "NumPy", "sklearn", "Jupyter"]
-        },
-        {
-            name: "Genomic Analysis Tool", 
-            icon: "fa-solid fa-dna",
-            href: "https://keanu-sida.github.io/IUD-study.pdf",
-            description: "Bioinformatics application for DNA sequence analysis using R and Python with interactive visualizations.",
-            tech: ["R", "Python", "Bioconductor", "Plotly", "Shiny"]
-        },
-        {
-            name: "Movie Recommender", 
-            icon: "fa-solid fa-film",
-            href: "https://keanu-sida.github.io/MovieRecommendationSystem/index.html",
-            description: "Content-based recommendation system using collaborative filtering and machine learning algorithms.",
-            tech: ["Python", "Pandas", "NumPy", "scikit-learn", "Flask"]
-        }
-    ]
-
-    let benefits = [
-        {name: 'a self taught developer', description: 'Professionally certified by Codecademy in Full Stack Engineering, I have built dozens of full stack applications from scratch using modern frameworks like React.js, Next.js, and SvelteKit. My passion for learning drives me to stay current with the latest technologies and best practices.'},
-        {name: 'a data visualization nerd', description: 'Originally introduced to programming during undergraduate work in genomic analysis, I have professional experience working with open source libraries in R and Python. I love transforming complex data into meaningful insights through interactive visualizations and machine learning models.'},
-        {name: 'a biochemistry graduate', description: 'My background in biochemistry has given me a unique analytical perspective and strong problem-solving skills. This scientific foundation helps me approach software development with methodical precision and attention to detail.'},
-        {name: 'a native German speaker & dual citizen', description: 'Native German language proficiency and dual citizenship; comfortable collaborating across cultures and regions.'}
-    ]
-
-    let skills = {
-        "Frontend": ["React.js", "Next.js", "SvelteKit", "JavaScript", "TypeScript", "HTML5", "CSS3", "TailwindCSS"],
-        "Backend": ["Node.js", "Express.js", "Python", "PostgreSQL", "MongoDB", "REST APIs"],
-        "Data Science": ["Pandas", "NumPy", "scikit-learn", "R", "Jupyter", "Matplotlib", "Plotly"],
-        "AI/ML & LLM": [
-            "OpenAI API", "Claude API", "Ollama", "LangChain", "LangGraph", "AI Agents",
-            "Vector Databases", "RAG", "Vapi", "LangFlow", "n8n", "LiveKit", "CrewAI"
-        ],
-        "Tools": ["Git", "GitHub", "VS Code", "Docker", "Postman", "Figma", "Cursor"]
-    }
+    import { base } from "$app/paths";
+    import { appPath } from "$lib/paths";
+    import { profile, featuredProjects, skills, benefits, traits, contactChannels } from "$lib/data";
 </script>
 
 <main class="flex flex-col flex-1 p-4">
     <section id="introPage" class="relative grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14 overflow-hidden">
         <div class="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10" use:reveal>
             <h2 class="font-semibold text-4xl sm:text-5xl md:text-6xl">
-                Hi! I'm <span class="poppins text-violet-400">Keanu</span> Sida <br/>Full Stack <span class="poppins text-violet-400">Developer</span>
+                Hi! I'm <span class="poppins text-violet-400">{profile.name.first}</span> {profile.name.last} <br/><span class="poppins text-violet-400">{profile.title}</span>
             </h2>
             <p class="text-base sm:text-lg md:text-xl">
-                AI‑forward stack: TypeScript, SvelteKit/Next.js, Node.js/Express, PostgreSQL, Tailwind CSS — plus LLM tooling (OpenAI/Claude, LangChain/LangGraph), RAG, and vector databases.
+                {profile.tagline}
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
                 <a 
                     class="blueShadow mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950 cursor-pointer" 
-                    href="mailto:keanu.sida@gmail.com?subject=Hey, Keanu!&body=I am emailing you because I came across your website and would like to get in touch!" 
+                    href={profile.links.emailWithSubject}
                     target="_blank"
                     rel="noopener noreferrer"
                 >
@@ -74,52 +39,56 @@
                 >
                     <h4>View My Work</h4>
                 </a>
+                <a 
+                    href={appPath('/tracker/', base)} 
+                    class="mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full border border-violet-700 text-slate-300 hover:border-violet-400 hover:text-violet-400 duration-200"
+                >
+                    <h4>Job Tracker</h4>
+                </a>
             </div>
         </div>
         <div class="relative grid place-items-center" use:reveal={{ delay: 150 }}>
-            <img src={"/images/selfie3.PNG"}  alt="Portrait of Keanu Sida" class="block object-cover z-[2] max-h-[70vh] max-w-full h-auto" style="clip-path: inset(0 0 4px 0);"/>
+            <img src="{appPath(profile.image.src, base)}" alt={profile.image.alt} class="block object-cover z-[2] max-h-[70vh] max-w-full h-auto" style="clip-path: inset(0 0 4px 0);"/>
         </div>
     </section>
 
     <section id="skills" class="py-20 lg:py-32">
-        <div class="flex flex-col gap-2 text-center mb-16" use:reveal>
-            <h6 class="text-lg sm:text-xl md:text-2xl">
-                Technical Expertise
-            </h6>
-            <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">
-                My <span class="poppins text-violet-400">Skills</span> & Technologies
-            </h3>
+        <div use:reveal>
+            <SectionHeading eyebrow="Technical Expertise">
+                <svelte:fragment slot="title">
+                    My <span class="poppins text-violet-400">Skills</span> & Technologies
+                </svelte:fragment>
+            </SectionHeading>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {#each Object.entries(skills) as [category, skillList]}
-                <div class="bg-slate-900 p-6 rounded-lg border border-violet-700 spotlight gradient-border" use:reveal>
-                    <h4 class="text-xl font-semibold text-violet-400 mb-4">{category}</h4>
-                    <div class="flex flex-wrap gap-2">
-                        {#each skillList as skill}
-                            <span class="px-3 py-1 bg-violet-700 text-white text-sm rounded-full">{skill}</span>
-                        {/each}
-                    </div>
+                <div use:reveal>
+                    <Card interactive={true}>
+                        <h4 class="text-xl font-semibold text-violet-400 mb-4">{category}</h4>
+                        <div class="flex flex-wrap gap-2">
+                            {#each skillList as skill}
+                                <Badge>{skill}</Badge>
+                            {/each}
+                        </div>
+                    </Card>
                 </div>
             {/each}
         </div>
     </section>
 
     <section id="projects" class="py-20 lg:py-32 flex flex-col gap-24">
-        <div class="flex flex-col gap-2 text-center">
-            <h6 class="text-lg sm:text-xl md:text-2xl">
-                A few of my projects:
-            </h6>
-            <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">
+        <SectionHeading eyebrow="A few of my projects:">
+            <svelte:fragment slot="title">
                 Curious to <span class="poppins text-violet-400">see</span> my work?
-            </h3>
-        </div>
+            </svelte:fragment>
+        </SectionHeading>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10" use:reveal>
-            {#each steps as step}
+            {#each featuredProjects as step}
                 <Step {step}>
                     <p>{step.description}</p>
                     <div class="flex flex-wrap gap-2 mt-4">
                         {#each step.tech as tech}
-                            <span class="px-2 py-1 bg-violet-700 text-white text-xs rounded">{tech}</span>
+                            <Badge size="xs">{tech}</Badge>
                         {/each}
                     </div>
                 </Step>
@@ -149,7 +118,7 @@
         </p>
         <div class="flex flex-col gap-20 w-full mx-auto max-w-[800px]">
             {#each benefits as benefit, index}
-                <div class="flex gap-6 sm:gap-8">
+                <div class="flex gap-6 sm:gap-8" use:reveal>
                     <p class="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold">
                         0{index+1}
                     </p>
@@ -166,82 +135,29 @@
         </div>
         <h5 class="text-2xl sm:text-3xl font-semibold text-center poppins">The <span class="text-violet-400 poppins">Complete</span> Package</h5>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1000px] mx-auto w-full">
-            <div class="bg-white/5 border border-violet-700 rounded-lg p-5">
-                <div class="flex items-center gap-3 mb-2">
-                    <span aria-label="dedication" class="text-2xl">💪</span>
-                    <h6 class="text-lg font-semibold">Dedication</h6>
-                </div>
-                <p class="text-slate-400 text-sm">Consistent learner with strong follow-through, attention to detail, and reliability.</p>
-            </div>
-            <div class="bg-white/5 border border-violet-700 rounded-lg p-5">
-                <div class="flex items-center gap-3 mb-2">
-                    <span aria-label="critical thinking" class="text-2xl">🧠</span>
-                    <h6 class="text-lg font-semibold">Critical Thinking</h6>
-                </div>
-                <p class="text-slate-400 text-sm">Analytical problem solver with a data-driven mindset.</p>
-            </div>
-            <div class="bg-white/5 border border-violet-700 rounded-lg p-5">
-                <div class="flex items-center gap-3 mb-2">
-                    <span aria-label="interpersonal skills" class="text-2xl">🤝</span>
-                    <h6 class="text-lg font-semibold">Interpersonal Skills</h6>
-                </div>
-                <p class="text-slate-400 text-sm">Clear communicator and collaborative team player.</p>
-            </div>
-            <div class="bg-white/5 border border-violet-700 rounded-lg p-5">
-                <div class="flex items-center gap-3 mb-2">
-                    <span aria-label="speed" class="text-2xl">⚡</span>
-                    <h6 class="text-lg font-semibold">Speed</h6>
-                </div>
-                <p class="text-slate-400 text-sm">Full-stack experience across modern JS and Python ecosystems.</p>
-            </div>
-            <div class="bg-white/5 border border-violet-700 rounded-lg p-5">
-                <div class="flex items-center gap-3 mb-2">
-                    <span aria-label="management experience" class="text-2xl">🧭</span>
-                    <h6 class="text-lg font-semibold">Management Experience</h6>
-                </div>
-                <p class="text-slate-400 text-sm">Comfortable leading initiatives and owning deliverables.</p>
-            </div>
-            <div class="bg-white/5 border border-violet-700 rounded-lg p-5">
-                <div class="flex items-center gap-3 mb-2">
-                    <span aria-label="passion" class="text-2xl">❤️</span>
-                    <h6 class="text-lg font-semibold">Passion</h6>
-                </div>
-                <p class="text-slate-400 text-sm">I care deeply about craft, performance, and user delight — I love building things that people love.</p>
-            </div>
+            {#each traits as trait}
+                <Card padding="p-5" interactive={true}>
+                    <div class="flex items-center gap-3 mb-2">
+                        <span aria-label={trait.label} class="text-2xl">{trait.icon}</span>
+                        <h6 class="text-lg font-semibold">{trait.title}</h6>
+                    </div>
+                    <p class="text-slate-400 text-sm">{trait.description}</p>
+                </Card>
+            {/each}
         </div>
         <p class="mx-auto">So why not reach out?</p>
     </section>
 
     <section id="contact" class="py-20 lg:py-32">
-        <div class="flex flex-col gap-2 text-center mb-16">
-            <h6 class="text-lg sm:text-xl md:text-2xl">
-                Let's Connect
-            </h6>
-            <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">
+        <SectionHeading eyebrow="Let's Connect">
+            <svelte:fragment slot="title">
                 Ready to <span class="poppins text-violet-400">Work Together</span>?
-            </h3>
-        </div>
+            </svelte:fragment>
+        </SectionHeading>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            <a href="mailto:keanu.sida@gmail.com" class="bg-slate-900 p-6 rounded-lg border border-violet-700 hover:border-violet-400 duration-200 text-center">
-                <i class="fa-solid fa-envelope text-3xl text-violet-400 mb-4"></i>
-                <h4 class="text-lg font-semibold mb-2">Email</h4>
-                <p class="text-sm text-slate-400">keanu.sida@gmail.com</p>
-            </a>
-            <a href="https://github.com/keanu-sida" target="_blank" rel="noopener noreferrer" class="bg-slate-900 p-6 rounded-lg border border-violet-700 hover:border-violet-400 duration-200 text-center">
-                <i class="fa-brands fa-github text-3xl text-violet-400 mb-4"></i>
-                <h4 class="text-lg font-semibold mb-2">GitHub</h4>
-                <p class="text-sm text-slate-400">View my code</p>
-            </a>
-            <a href="https://www.linkedin.com/in/keanu-sida" target="_blank" rel="noopener noreferrer" class="bg-slate-900 p-6 rounded-lg border border-violet-700 hover:border-violet-400 duration-200 text-center">
-                <i class="fa-brands fa-linkedin text-3xl text-violet-400 mb-4"></i>
-                <h4 class="text-lg font-semibold mb-2">LinkedIn</h4>
-                <p class="text-sm text-slate-400">Connect with me</p>
-            </a>
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" class="bg-slate-900 p-6 rounded-lg border border-violet-700 hover:border-violet-400 duration-200 text-center">
-                <i class="fa-solid fa-file-pdf text-3xl text-violet-400 mb-4"></i>
-                <h4 class="text-lg font-semibold mb-2">Resume</h4>
-                <p class="text-sm text-slate-400">Download PDF</p>
-            </a>
+            {#each contactChannels as channel}
+                <ContactCard {channel} />
+            {/each}
         </div>
     </section>
 </main>

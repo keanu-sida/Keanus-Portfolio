@@ -1,15 +1,15 @@
 <script>
     export let y;
 
-    let tabs = [
-        {name: "Skills", link: "#skills"},
-        {name: "Projects", link: "#projects"},
-        {name: "Resume", link: "#resume"},
-        {name: "About Me", link: "#about"},
-        {name: "Contact", link: "#contact"},
-    ]
+    import { base } from '$app/paths';
+    import { navTabs, profile } from '$lib/data';
+    import { appPath, homeHash } from '$lib/paths';
 
     let menuOpen = false;
+
+    function navHref(tab) {
+        return tab.isRoute ? appPath(tab.link, base) : homeHash(tab.link, base);
+    }
 </script>
 
 <header class={"sticky z-[10] top-0 duration-200 px-6 border border-solid " + (
@@ -18,18 +18,27 @@
     : " py-6 bg-transparent border-transparent"
 )}>
     <div class="flex items-center justify-between gap-3">
-        <h1 class="font-medium">
-            <b class="font-bold poppins">Keanu</b> Sida
-        </h1>
+        <a href={appPath('/', base)} class="font-medium hover:text-violet-400 duration-200">
+            <b class="font-bold poppins">{profile.name.first}</b> {profile.name.last}
+        </a>
         <div class="sm:flex ml-auto pr-4 items-center gap-4 hidden">
-            {#each tabs as tab, index}
-                <a href = {tab.link} class="duration-200 hover:text-violet-400">
+            {#each navTabs as tab}
+                <a href={navHref(tab)} class="duration-200 hover:text-violet-400">
                     <p>{tab.name}</p>
                 </a>
             {/each}
+            <a
+                href={profile.links.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-violet-400 hover:text-violet-300 duration-200"
+                aria-label="LinkedIn profile"
+            >
+                <i class="fa-brands fa-linkedin text-lg"></i>
+            </a>
         </div>
         <a 
-            href="mailto:keanu.sida@gmail.com?subject=Hey, Keanu!&body=I am emailing because I came across your website and would like to get in touch!"
+            href={profile.links.emailWithSubject}
             target="_blank"
             rel="noopener noreferrer"
             class="blueShadow relative overflow-hidden px-5 py-2 group rounded-full bg-white text-slate-950"
@@ -71,12 +80,21 @@
             >
                 <i class="fa-solid fa-xmark"></i>
             </button>
-            <nav class="h-full w-full flex flex-col items-center justify-center gap-6">
-                {#each tabs as tab}
-                    <a href={tab.link} class="text-2xl sm:text-3xl font-semibold hover:text-violet-400 duration-150" on:click={() => menuOpen = false}>
+            <nav id="mobile-nav" class="h-full w-full flex flex-col items-center justify-center gap-6">
+                {#each navTabs as tab}
+                    <a href={navHref(tab)} class="text-2xl sm:text-3xl font-semibold hover:text-violet-400 duration-150" on:click={() => menuOpen = false}>
                         {tab.name}
                     </a>
                 {/each}
+                <a
+                    href={profile.links.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-2xl text-violet-400"
+                    on:click={() => menuOpen = false}
+                >
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                </a>
             </nav>
         </div>
     {/if}

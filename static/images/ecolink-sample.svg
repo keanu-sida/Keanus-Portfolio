@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#042f2e"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <rect x="24" y="24" width="752" height="402" rx="16" stroke="#22d3ee" stroke-width="2" stroke-opacity="0.5"/>
+  <text x="400" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#f8fafc">EcoLink</text>
+  <text x="400" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#67e8f9">Sustainable living platform</text>
+  <text x="400" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#64748b">Add screenshot: static/images/ecolink-sample.png</text>
+</svg>

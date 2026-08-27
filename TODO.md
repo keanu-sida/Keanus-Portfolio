@@ -3,12 +3,12 @@
 This file tracks improvements and open questions for Keanu Sida's portfolio. Edit and check items off as they’re completed.
 
 ## SEO and Meta
-- [ ] Add page metadata in `src/app.html`:
-  - [ ] `<title>` (≤ 60 chars) and meta description (≤ 160 chars)
-  - [ ] Open Graph tags: `og:title`, `og:description`, `og:image`, `og:url`
-  - [ ] Twitter Card tags: `twitter:card`, `twitter:title`, `twitter:description`, `twitter:image`
-  - [ ] Add an OG image asset (e.g., `static/og.png`) and reference it
-- [ ] Verify favicon and theme color
+- [x] Add page metadata in `src/app.html`:
+  - [x] `<title>` (≤ 60 chars) and meta description (≤ 160 chars)
+  - [x] Open Graph tags: `og:title`, `og:description`, `og:image`, `og:url`
+  - [x] Twitter Card tags: `twitter:card`, `twitter:title`, `twitter:description`, `twitter:image`
+  - [x] Add an OG image asset (e.g., `static/og.png`) and reference it
+- [x] Verify favicon and theme color
 
 Needs input:
 - [ ] Title:
@@ -61,12 +61,12 @@ Needs input (per role):
 
 ## New Project Ideas (future repos)
 - [ ] Hotel Cancellation Predictor mini app (SvelteKit UI + model inference + feature importance viz)
-- [ ] Job Application Tracker (auth, CRUD, filters, CSV import/export) to demonstrate pragmatic full‑stack skills
+- [x] Job Application Tracker (auth, CRUD, filters, CSV import/export) to demonstrate pragmatic full‑stack skills
 
 ## Housekeeping
 - [x] Serve resume at `static/resume.pdf`
 - [x] Remove duplicate root resume file
-- [ ] Add an OG image asset to `static/` and reference it in meta tags
+- [x] Add an OG image asset to `static/` and reference it in meta tags
 
 ---
 Last updated: commit when items change.
