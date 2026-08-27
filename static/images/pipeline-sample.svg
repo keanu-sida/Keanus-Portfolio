@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" fill="none">
+  <rect width="800" height="450" fill="#0f172a"/>
+  <rect x="24" y="24" width="752" height="56" rx="12" fill="#1e293b" stroke="#6d28d9" stroke-width="2"/>
+  <rect x="48" y="44" width="120" height="16" rx="4" fill="#0f766e"/>
+  <rect x="200" y="44" width="80" height="16" rx="4" fill="#334155"/>
+  <rect x="300" y="44" width="64" height="16" rx="4" fill="#334155"/>
+  <rect x="24" y="104" width="140" height="322" rx="12" fill="#1e293b" stroke="#334155"/>
+  <rect x="40" y="128" width="108" height="48" rx="8" fill="#0f766e" opacity="0.25" stroke="#14b8a6"/>
+  <rect x="40" y="188" width="108" height="48" rx="8" fill="#1e293b" stroke="#475569"/>
+  <rect x="40" y="248" width="108" height="48" rx="8" fill="#1e293b" stroke="#475569"/>
+  <rect x="180" y="104" width="140" height="322" rx="12" fill="#1e293b" stroke="#334155"/>
+  <rect x="196" y="128" width="108" height="56" rx="8" fill="#1e293b" stroke="#0ea5e9"/>
+  <rect x="196" y="196" width="108" height="56" rx="8" fill="#1e293b" stroke="#475569"/>
+  <rect x="336" y="104" width="140" height="322" rx="12" fill="#1e293b" stroke="#334155"/>
+  <rect x="352" y="128" width="108" height="56" rx="8" fill="#1e293b" stroke="#8b5cf6"/>
+  <rect x="492" y="104" width="140" height="322" rx="12" fill="#1e293b" stroke="#334155"/>
+  <rect x="508" y="128" width="108" height="56" rx="8" fill="#1e293b" stroke="#f59e0b"/>
+  <rect x="648" y="104" width="128" height="322" rx="12" fill="#1e293b" stroke="#334155"/>
+  <rect x="664" y="128" width="96" height="56" rx="8" fill="#1e293b" stroke="#10b981"/>
+  <text x="400" y="420" text-anchor="middle" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="18">Pipeline  Job Application Tracker</text>
+</svg>
