@@ -7,7 +7,8 @@ Personal portfolio and full-stack demo apps built with **SvelteKit**, **Tailwind
 ## Features
 
 - Single-page portfolio with skills, projects, resume, and contact
-- **Pipeline** job tracker (React SPA) served at `/pipeline/`
+- **PathTree** as the flagship product ([pathtree.app](https://pathtree.app))
+- Pipeline job tracker (React SPA) served at `/pipeline/`
 - Centralized content in `src/lib/data/` — one place for LinkedIn, resume, projects, and nav
 - Resume PDF auto-generated from the same data as the on-site resume section
 - Continuous deployment to Netlify
@@ -25,9 +26,9 @@ Open [http://localhost:5173](http://localhost:5173).
 
 | What to update | Where |
 |----------------|-------|
-| Name, email, LinkedIn, GitHub | `src/lib/data/profile.js` |
+| Name, email, LinkedIn, GitHub, PathTree | `src/lib/data/profile.js` |
 | Work experience, education, certs | `src/lib/data/resume.js` |
-| Featured + live projects | `src/lib/data/projects.js` |
+| Featured + other projects | `src/lib/data/projects.js` |
 | Skills, about section | `src/lib/data/skills.js`, `benefits.js` |
 | Navigation tabs | `src/lib/data/navigation.js` |
 | Production URL / SEO | `siteMeta` in `profile.js` |
@@ -42,15 +43,7 @@ The build runs this automatically via `prebuild`.
 
 ## Assets
 
-Place custom images in `static/images/`:
-
-| File | Purpose |
-|------|---------|
-| `selfie3.PNG` | Hero portrait (update `profile.image.src` when added) |
-| `blotting-sample.png` | Blotting Innovations screenshot |
-| `ecolink-sample.png` | EcoLink screenshot |
-
-SVG placeholders ship by default in `static/images/` and `static/og.png` for social previews.
+Place project screenshots in `static/images/`. SVG placeholders ship by default, plus `static/og.png` for social previews.
 
 ## Deployment
 
@@ -84,10 +77,8 @@ and copy its `dist/` output into `static/pipeline/`.
 src/
 ├── lib/
 │   ├── data/          # Single source of truth (profile, resume, projects)
-│   ├── components/    # Shared UI (Card, Badge, SectionHeading)
-│   └── tracker/       # Job tracker logic (store, CSV, constants)
-├── components/        # Page sections (Main, Resume, Header, …)
+│   └── components/    # Shared UI (Card, Badge, SectionHeading)
+├── components/        # Page sections (Main, PathMap, CaseStudy, Header, …)
 └── routes/
-    ├── +page.svelte   # Home
-    └── tracker/       # Job pipeline app
+    └── +page.svelte   # Home
 ```

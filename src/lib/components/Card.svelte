@@ -6,10 +6,8 @@
 </script>
 
 <div
-	class="bg-slate-900 rounded-lg border border-violet-700 {padding} {className}"
-	class:spotlight={interactive}
-	class:gradient-border={interactive}
-	class:hover:border-violet-400={interactive}
+	class="bg-ink-raised border border-line {padding} {className}"
+	class:hover:border-leaf={interactive}
 	class:duration-200={interactive}
 >
 	<slot />

@@ -2,6 +2,18 @@
 
 export const experience = [
 	{
+		title: 'Founder',
+		company: 'PathTree',
+		period: '2025 - Present',
+		description:
+			'Building pathtree.app — an interactive platform that maps career paths, tracks skill growth, and guides next steps with an in-app agent.',
+		achievements: [
+			'Shipped a 3D helix home, career-tree explorer, study feed, and orchard progress map',
+			'Built a Node.js/Express API with SQLite, auth, and live labor-market data',
+			'Designed WebGL visualization with Three.js and Pixi.js'
+		]
+	},
+	{
 		title: 'Full Stack Developer',
 		company: 'Freelance',
 		period: '2023 - Present',

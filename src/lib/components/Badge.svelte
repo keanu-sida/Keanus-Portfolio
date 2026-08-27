@@ -3,13 +3,13 @@
 </script>
 
 <span
-	class="bg-violet-700 text-white rounded-full"
-	class:px-3={size === 'sm'}
+	class="font-mono uppercase tracking-wide text-paper-muted border border-line"
+	class:px-2={size === 'sm'}
 	class:py-1={size === 'sm'}
-	class:text-sm={size === 'sm'}
-	class:px-2={size === 'xs'}
+	class:text-[11px]={size === 'sm'}
+	class:px-1.5={size === 'xs'}
 	class:py-0.5={size === 'xs'}
-	class:text-xs={size === 'xs'}
+	class:text-[10px]={size === 'xs'}
 >
 	<slot />
 </span>

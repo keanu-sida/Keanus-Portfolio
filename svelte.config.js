@@ -26,6 +26,10 @@ const config = {
 			handleHttpError({ path, message }) {
 				if (SELF_HOSTED_APPS.some((app) => path.startsWith(app))) return;
 				throw new Error(message);
+			},
+			handleMissingId({ path, id }) {
+				if (SELF_HOSTED_APPS.some((app) => path.startsWith(app))) return;
+				throw new Error(`Missing element id="${id}" on ${path}`);
 			}
 		}
 	},

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" fill="none">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07140f"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#4ade80"/>
+      <stop offset="1" stop-color="#22c55e"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="62%" cy="48%" r="40%">
+      <stop stop-color="#14532d" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#sky)"/>
+  <rect width="800" height="450" fill="url(#glow)"/>
+
+  <!-- helix-style cards -->
+  <g opacity="0.45" transform="translate(430, 40) rotate(-12)">
+    <rect x="0" y="0" width="168" height="108" rx="14" fill="#0b1a14" stroke="#365314" stroke-width="1.5"/>
+    <circle cx="36" cy="36" r="10" fill="#854d0e" opacity="0.8"/>
+    <rect x="56" y="28" width="88" height="8" rx="4" fill="#a3a3a3" opacity="0.5"/>
+    <rect x="56" y="44" width="64" height="6" rx="3" fill="#525252" opacity="0.6"/>
+  </g>
+  <g opacity="0.7" transform="translate(560, 120) rotate(8)">
+    <rect x="0" y="0" width="180" height="116" rx="14" fill="#0b1a14" stroke="#3f6212" stroke-width="1.5"/>
+    <circle cx="38" cy="38" r="11" fill="#ca8a04"/>
+    <circle cx="62" cy="52" r="7" fill="#4ade80"/>
+    <line x1="38" y1="38" x2="62" y2="52" stroke="#a3e635" stroke-width="1.5"/>
+    <rect x="84" y="30" width="72" height="8" rx="4" fill="#d4d4d4" opacity="0.55"/>
+    <rect x="84" y="46" width="54" height="6" rx="3" fill="#737373" opacity="0.6"/>
+  </g>
+  <g transform="translate(390, 150)">
+    <rect x="0" y="0" width="220" height="148" rx="16" fill="#052e16" stroke="#4ade80" stroke-width="1.75"/>
+    <circle cx="48" cy="52" r="16" fill="none" stroke="#facc15" stroke-width="2"/>
+    <circle cx="48" cy="52" r="5" fill="#facc15"/>
+    <circle cx="88" cy="36" r="8" fill="#4ade80"/>
+    <circle cx="102" cy="72" r="6" fill="#86efac"/>
+    <line x1="48" y1="52" x2="88" y2="36" stroke="#a3e635" stroke-width="1.5"/>
+    <line x1="48" y1="52" x2="102" y2="72" stroke="#65a30d" stroke-width="1.5"/>
+    <rect x="130" y="32" width="70" height="9" rx="4" fill="#ecfccb"/>
+    <rect x="130" y="50" width="52" height="7" rx="3" fill="#86efac" opacity="0.7"/>
+    <rect x="24" y="104" width="172" height="22" rx="11" fill="#16a34a"/>
+  </g>
+
+  <!-- copy block -->
+  <text x="48" y="92" font-family="Georgia, 'Times New Roman', serif" font-size="28" fill="#f8fafc">Map every path.</text>
+  <text x="48" y="128" font-family="Georgia, 'Times New Roman', serif" font-size="28" fill="#f8fafc">Tend what you plant.</text>
+  <rect x="48" y="168" width="132" height="36" rx="18" fill="#22c55e"/>
+  <text x="114" y="191" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#052e16">Enter orchard</text>
+  <rect x="192" y="168" width="128" height="36" rx="18" fill="none" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="256" y="191" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#bbf7d0">Browse trees</text>
+
+  <text x="400" y="424" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#86efac">pathtree.app</text>
+</svg>
