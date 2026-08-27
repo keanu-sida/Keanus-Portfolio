@@ -2,15 +2,15 @@
 
 Personal portfolio and full-stack demo apps built with **SvelteKit**, **Tailwind CSS**, and a centralized content layer.
 
-**Live site:** [keanu-sida.github.io/Keanus-Portfolio](https://keanu-sida.github.io/Keanus-Portfolio/)
+**Live site:** [keanucodes.netlify.app](https://keanucodes.netlify.app/)
 
 ## Features
 
 - Single-page portfolio with skills, projects, resume, and contact
-- **Job Pipeline Tracker** at `/tracker` (CRUD, filters, CSV import/export)
+- **Pipeline** job tracker (React SPA) served at `/pipeline/`
 - Centralized content in `src/lib/data/` — one place for LinkedIn, resume, projects, and nav
 - Resume PDF auto-generated from the same data as the on-site resume section
-- GitHub Pages deployment via GitHub Actions
+- Continuous deployment to Netlify
 
 ## Development
 
@@ -20,13 +20,6 @@ npm run dev
 ```
 
 Open [http://localhost:5173](http://localhost:5173).
-
-To preview the GitHub Pages build locally (with base path):
-
-```bash
-BASE_PATH=/Keanus-Portfolio npm run build
-BASE_PATH=/Keanus-Portfolio npm run preview
-```
 
 ## Content maintenance
 
@@ -61,22 +54,27 @@ SVG placeholders ship by default in `static/images/` and `static/og.png` for soc
 
 ## Deployment
 
-Pushes to `main` deploy to **GitHub Pages** using `.github/workflows/deploy.yml`.
+Pushes to `main` deploy to **Netlify** ([keanucodes.netlify.app](https://keanucodes.netlify.app/)).
 
-**One-time GitHub setup:**
+Build settings live in `netlify.toml`: `npm run build` publishing the `build/` directory.
+The site is fully prerendered via `@sveltejs/adapter-static`.
 
-1. Repo → **Settings** → **Pages**
-2. Source: **GitHub Actions**
+### The Pipeline app
 
-The workflow sets `BASE_PATH=/<repo-name>` automatically so routes and assets work under `github.io/<repo-name>/`.
+`/pipeline/` is a **separately built React SPA** committed as static files under
+`static/pipeline/`. Its assets are absolute (`/pipeline/assets/...`), so the portfolio
+must be served from a domain root. Links to it use `data-sveltekit-reload` so the
+SvelteKit router performs a full page load instead of client-side routing.
+
+To update it, rebuild [keanu-sida/pipeline](https://github.com/keanu-sida/pipeline)
+and copy its `dist/` output into `static/pipeline/`.
 
 ## Scripts
 
 | Command | Description |
 |---------|-------------|
 | `npm run dev` | Start dev server |
-| `npm run build` | Generate resume PDF + production build (local, no base path) |
-| `npm run build:pages` | Production build for GitHub Pages (`/Keanus-Portfolio` base) |
+| `npm run build` | Generate resume PDF + production build |
 | `npm run preview` | Preview production build |
 | `npm run resume:pdf` | Regenerate `static/resume.pdf` from data |
 

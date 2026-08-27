@@ -36,10 +36,11 @@
             <i class="fa-brands fa-linkedin"></i> View LinkedIn
         </a>
         <a
-            href={appPath('/tracker/', base)}
+            href={appPath('/pipeline/', base)}
+            data-sveltekit-reload
             class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-violet-700 text-violet-400 hover:border-violet-400 text-sm duration-200"
         >
-            <i class="fa-solid fa-briefcase"></i> Job Pipeline Tracker
+            <i class="fa-solid fa-briefcase"></i> Try Pipeline
         </a>
     </div>
 

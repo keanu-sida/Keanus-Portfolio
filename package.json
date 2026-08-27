@@ -5,7 +5,6 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
-		"build:pages": "cross-env BASE_PATH=/Keanus-Portfolio npm run build",
 		"preview": "vite preview",
 		"resume:pdf": "node scripts/generate-resume-pdf.mjs",
 		"prebuild": "npm run resume:pdf"
@@ -18,8 +17,7 @@
 		"svelte": "^4.0.5",
 		"tailwindcss": "^3.3.3",
 		"vite": "^4.4.2",
-		"pdfkit": "^0.15.0",
-		"cross-env": "^7.0.3"
+		"pdfkit": "^0.15.0"
 	},
 	"type": "module"
 }

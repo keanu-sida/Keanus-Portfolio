@@ -1,0 +1,23 @@
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Long-cache immutable hashed assets; keep HTML revalidating.
+[[headers]]
+  for = "/_app/immutable/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/pipeline/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Pipeline is a separately built SPA; route its client-side paths to its own shell.
+[[redirects]]
+  from = "/pipeline/*"
+  to = "/pipeline/index.html"
+  status = 200

@@ -7,6 +7,13 @@
 export function reveal(node, options = {}) {
   const { threshold = 0.2, root = null, rootMargin = '0px', once = true, delay = 0 } = options;
 
+  const prefersReducedMotion =
+    typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (prefersReducedMotion) {
+    return { destroy() {} };
+  }
+
   node.style.opacity = '0';
   node.style.transform = 'translateY(12px)';
   node.style.transition = `opacity 500ms ease, transform 600ms cubic-bezier(0.22, 1, 0.36, 1) ${delay}ms`;

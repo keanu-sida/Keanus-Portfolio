@@ -1,6 +1,16 @@
 export const skills = {
 	Frontend: ['React.js', 'Next.js', 'SvelteKit', 'JavaScript', 'TypeScript', 'HTML5', 'CSS3', 'TailwindCSS'],
-	Backend: ['Node.js', 'Express.js', 'Python', 'PostgreSQL', 'MongoDB', 'REST APIs'],
+	Backend: [
+		'Node.js',
+		'Express.js',
+		'Python',
+		'FastAPI',
+		'PostgreSQL',
+		'MongoDB',
+		'REST APIs',
+		'Redis',
+		'Celery'
+	],
 	'Data Science': ['Pandas', 'NumPy', 'scikit-learn', 'R', 'Jupyter', 'Matplotlib', 'Plotly'],
 	'AI/ML & LLM': [
 		'OpenAI API',

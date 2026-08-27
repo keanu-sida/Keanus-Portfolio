@@ -23,7 +23,11 @@
         </a>
         <div class="sm:flex ml-auto pr-4 items-center gap-4 hidden">
             {#each navTabs as tab}
-                <a href={navHref(tab)} class="duration-200 hover:text-violet-400">
+                <a
+                    href={navHref(tab)}
+                    data-sveltekit-reload={tab.selfHosted ? '' : undefined}
+                    class="duration-200 hover:text-violet-400"
+                >
                     <p>{tab.name}</p>
                 </a>
             {/each}
@@ -82,7 +86,12 @@
             </button>
             <nav id="mobile-nav" class="h-full w-full flex flex-col items-center justify-center gap-6">
                 {#each navTabs as tab}
-                    <a href={navHref(tab)} class="text-2xl sm:text-3xl font-semibold hover:text-violet-400 duration-150" on:click={() => menuOpen = false}>
+                    <a
+                        href={navHref(tab)}
+                        data-sveltekit-reload={tab.selfHosted ? '' : undefined}
+                        class="text-2xl sm:text-3xl font-semibold hover:text-violet-400 duration-150"
+                        on:click={() => menuOpen = false}
+                    >
                         {tab.name}
                     </a>
                 {/each}

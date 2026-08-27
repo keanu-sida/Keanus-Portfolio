@@ -22,7 +22,7 @@ export const siteMeta = {
 	title: 'Keanu Sida | Full Stack Developer',
 	description:
 		'Full-stack developer specializing in TypeScript, SvelteKit, Node.js, PostgreSQL, and AI/LLM integrations. View projects, resume, and live demos.',
-	url: 'https://keanu-sida.github.io/Keanus-Portfolio/',
+	url: 'https://keanucodes.netlify.app/',
 	ogImage: '/og.png',
 	themeColor: '#020617'
 };

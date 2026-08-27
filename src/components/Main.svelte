@@ -40,10 +40,11 @@
                     <h4>View My Work</h4>
                 </a>
                 <a 
-                    href={appPath('/tracker/', base)} 
+                    href={appPath('/pipeline/', base)} 
+                    data-sveltekit-reload
                     class="mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full border border-violet-700 text-slate-300 hover:border-violet-400 hover:text-violet-400 duration-200"
                 >
-                    <h4>Job Tracker</h4>
+                    <h4>Try Pipeline</h4>
                 </a>
             </div>
         </div>
@@ -82,7 +83,7 @@
                 Curious to <span class="poppins text-violet-400">see</span> my work?
             </svelte:fragment>
         </SectionHeading>
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10" use:reveal>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-10" use:reveal>
             {#each featuredProjects as step}
                 <Step {step}>
                     <p>{step.description}</p>

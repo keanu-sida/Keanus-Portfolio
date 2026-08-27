@@ -3,6 +3,12 @@ import { vitePreprocess } from '@sveltejs/kit/vite';
 
 const base = process.env.BASE_PATH ?? '';
 
+/**
+ * Directories under static/ that hold separately built apps. They resolve via
+ * their own index.html at runtime, which the prerender crawler can't follow.
+ */
+const SELF_HOSTED_APPS = ['/pipeline'];
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
@@ -15,6 +21,12 @@ const config = {
 		}),
 		paths: {
 			base
+		},
+		prerender: {
+			handleHttpError({ path, message }) {
+				if (SELF_HOSTED_APPS.some((app) => path.startsWith(app))) return;
+				throw new Error(message);
+			}
 		}
 	},
 	preprocess: vitePreprocess()
