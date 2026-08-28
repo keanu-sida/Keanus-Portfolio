@@ -7,6 +7,7 @@ export const skillEvidence = [
 	{ name: 'Node.js / Express / SQLite', evidence: 'PathTree API, auth, labor-market data' },
 	{ name: 'IndexedDB', evidence: 'Pipeline privacy-first storage' },
 	{ name: 'HTML / CSS / Figma', evidence: 'Spots, built to spec across three breakpoints' },
+	{ name: 'WordPress', evidence: 'ECOBLOX marketing site, six-month engagement' },
 	{ name: 'FastAPI / Postgres', evidence: 'NeetMeet meeting-equity API' },
 	{ name: 'Python / R', evidence: 'Genomic analysis and cancellation model' },
 	{ name: 'LLM agents', evidence: 'Trellis in PathTree; LangChain / Claude tooling' }

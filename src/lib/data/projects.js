@@ -39,6 +39,21 @@ export const caseStudies = [
 		selfHosted: true
 	},
 	{
+		slug: 'ecoblox',
+		name: 'ECOBLOX',
+		kicker: 'Client site',
+		year: '2025',
+		problem:
+			'A modular AI/HPC data center company needed a public site that could carry product, partner, and news content without reading like a generic industrial brochure.',
+		approach:
+			'Six months on WordPress: custom theme work, layout, media, and ongoing front-end so the story stayed product-first as announcements scaled.',
+		result: 'ecoblox.com — the live marketing site for ECOBLOX MDCs, partners, and newsroom.',
+		tech: ['WordPress', 'HTML', 'CSS', 'JavaScript'],
+		liveUrl: 'https://ecoblox.com',
+		image: '/images/ecoblox-sample.svg',
+		imageAlt: 'ECOBLOX marketing site for modular AI/HPC data centers'
+	},
+	{
 		slug: 'blotting',
 		name: 'Blotting Innovations',
 		kicker: 'Client site',

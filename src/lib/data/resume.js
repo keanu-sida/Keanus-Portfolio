@@ -14,6 +14,17 @@ export const experience = [
 		]
 	},
 	{
+		title: 'Web Developer',
+		company: 'ECOBLOX',
+		period: '2025 (6 months)',
+		description:
+			'Owned front-end and WordPress work for the public marketing site of a modular AI/HPC data center company.',
+		achievements: [
+			'Shipped and maintained ecoblox.com across product, partner, and newsroom pages',
+			'Customized theme, layout, and media so the site could keep pace with announcements'
+		]
+	},
+	{
 		title: 'Full Stack Developer',
 		company: 'Freelance',
 		period: '2023 - Present',
